@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Demo</title>
+
+    <style>
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #8e2de2, #4a00e0);
+            transition: background 0.6s ease;
+        }
+
+        /* Container Card */
+        .container {
+            width: 90%;
+            max-width: 420px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+            animation: fadeUp 1.2s ease;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #4a00e0;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Tablet */
+        @media (min-width: 600px) {
+            body {
+                background: linear-gradient(135deg, #11998e, #38ef7d);
+            }
+
+            .container {
+                max-width: 600px;
+            }
+        }
+
+        /* Laptop / Desktop */
+        @media (min-width: 992px) {
+            body {
+                background: linear-gradient(135deg, #ff512f, #dd2476);
+            }
+
+            .container {
+                max-width: 750px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Responsive Web Page</h2>
+        <p>
+            This card automatically adapts to mobile, tablet, and desktop screens
+            using CSS media queries with smooth animations and modern UI design.
+        </p>
+    </div>
+
+</body>
+</html>
