@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Card</title>
+
+    <style>
+        /* Page Styling */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        /* Card Styling */
+        .box {
+            width: 90%;
+            max-width: 380px;
+            background: linear-gradient(135deg, #ffffff, #f3f6ff);
+            padding: 30px;
+            border-radius: 18px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            animation: fadeUp 1.2s ease;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        /* Hover Animation */
+        .box:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Text Styling */
+        .box h2 {
+            margin-top: 0;
+            color: #5a4fcf;
+            letter-spacing: 1px;
+        }
+
+        .box p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Entry Animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Text */
+        @media (max-width: 480px) {
+            .box h2 {
+                font-size: 20px;
+            }
+            .box p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>CSS Box Model</h2>
+        <p>
+            This card demonstrates the CSS Box Model using margin, padding,
+            border, shadow, and smooth animations for a modern UI.
+        </p>
+    </div>
+
+</body>
+</html>
