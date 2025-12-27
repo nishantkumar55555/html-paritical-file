@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Html form</title>
+    </head>
+    <body>
+        <form>
+            <h1> Registration form</h1>
+            <div class="row">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder:"Enter your name" required><br><br>
+            </div>
+
+            <!---- Email input-->
+            <div class="row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder:"Enter your email id" required><br><br>
+            </div>
+
+
+            <!-----Radio button-->
+            <fieldset>
+            <div class="row">
+                <legend>Gender</legend>
+                <label class="inline"><input type="radio" name="gender" value="male" required>Male</label><br><br>
+                 <label class="inline"><input type="radio" name="gender" value="female">Female</label><br><br>
+                 <label class="inline"><input type="radio" name="gender" value="other"> Other</label>
+            </fieldset>
+         </div>
+
+
+         <!-----checkboxes--->
+         <fieldset>
+            <legend> Intrests</legend>
+            <label class="inline"><input type="checkbox" name="Intrests" value="coding"> Coding</label>
+            <label class="inline"><input type="checkbox" name="intrest" value="music"> Music</label>
+            <label class="inline"><input type="checkbox" name="intrest" value="sports"> Sports</label>
+         </fieldset>
+
+
+         <---submit and reset--->
+            <div class="row">
+                <button type="submit"> Submit</button>
+                <button type="reset"> Reset</button>
+            </div>
+
+        </form>
+    </body>
+</html>
