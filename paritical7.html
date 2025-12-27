@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Types Demo</title>
+
+    <!-- INTERNAL CSS -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        h2 {
+            color: #2a5298;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 17px;
+            color: #444;
+            text-align: center;
+        }
+
+        .section {
+            margin: 25px 0;
+            padding: 20px;
+            border-radius: 12px;
+            background: #f4f7fb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 22px !important;
+            }
+        }
+    </style>
+
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- INLINE CSS -->
+        <div class="section">
+            <h1 style="color: #ffffff; text-align: center; padding: 15px; border-radius: 10px; background: linear-gradient(90deg, #ff512f, #dd2476);">
+                Inline CSS
+            </h1>
+            <p>Heading styled directly using <b>inline CSS</b>.</p>
+        </div>
+
+        <!-- INTERNAL CSS -->
+        <div class="section">
+            <h2>Internal CSS</h2>
+            <p>This paragraph is styled using <b>internal CSS</b>.</p>
+        </div>
+
+        <!-- EXTERNAL CSS -->
+        <div class="section external-box">
+            <h2>External CSS</h2>
+            <p>This section is styled using <b>external CSS</b>.</p>
+        </div>
+
+    </div>
+</body>
+</html>
