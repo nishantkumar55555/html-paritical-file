@@ -1,0 +1,19 @@
+<html>
+<body>
+
+Number 1: <input id="a"><br><br>
+Number 2: <input id="b"><br><br>
+
+<button onclick="add()">Add</button>
+
+<p id="r"></p>
+
+<script>
+function add() {
+  let x = Number(document.getElementById("a").value);
+  let y = Number(document.getElementById("b").value);
+  document.getElementById("r").innerHTML = "Result: " + (x + y);
+}
+</script>
+</body>
+</html>
